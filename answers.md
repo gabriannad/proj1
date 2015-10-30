@@ -15,6 +15,7 @@ redirect_to @pokemon.trainer
 When rake routes is run, the line "trainer GET    /trainers/:id(.:format)           trainers#show" lets me know that if I pass in an instance of Trainer to redirect_to, it will use the path 'trainers/:id', where :id is the ID of the trainer.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+In views/layouts/application.html.erb, after the navigation bar, _message.html.erb is rendered, which displays each message of each error that @pokemon has. 
 
 # Give us feedback on the project and decal below!
 
